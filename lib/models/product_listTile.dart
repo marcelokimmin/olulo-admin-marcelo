@@ -5,13 +5,16 @@ class ProductListTile extends StatelessWidget {
   const ProductListTile({
     Key? key,
     required this.product,
+    required this.onTap,
   }) :  super(key: key);
 
   final Product product;
+  final Function()? onTap;
 
   @override
   Widget build(BuildContext context) {
     return ListTile(
+      onTap: onTap,
       leading: Image.asset(product.imageUrl,
           height: 40,),
       title: Text(
@@ -22,7 +25,7 @@ class ProductListTile extends StatelessWidget {
         product.description,
         style: Theme.of(context).textTheme.bodyLarge,
       ),
-      trailing: const Icon(Icons.menu),
+      //trailing: const Icon(Icons.menu),
     );
   }
 }

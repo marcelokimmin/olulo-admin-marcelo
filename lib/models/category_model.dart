@@ -44,17 +44,17 @@ class Category extends Equatable {
   @override
   List<Object?> get props => [id, name, description, imageUrl, index];
 
-  static List<Category> categaties = const [
+  static List<Category> categories = const [
     Category(
       id: '1',
-      name: 'Margarita',
+      name: 'Pizza',
       description: 'Tomato Salsa and Queso frita',
       imageUrl: 'loging/01.png',
       index: 0,
     ),
     Category(
       id: '2',
-      name: 'Carne Salada',
+      name: 'Hamburger',
       description: 'Carne de res con salsa de zanahoria',
       imageUrl: 'loging/02.png',
       index: 1,

@@ -15,7 +15,7 @@ class LoadCategories extends CategoryEvent {
 });
 
   @override
-  List<Object?> get props => categories;
+  List<Object?> get props => [categories];
 }
 
 class SelectCategory extends CategoryEvent {
@@ -25,16 +25,21 @@ class SelectCategory extends CategoryEvent {
 
   @override
   List<Object?> get props => [category];
+
+  get oldIndex => null;
+
+  get newIndex => null;
 }
 
 class SortCategories extends CategoryEvent {
   final int oldIndex;
   final int newIndex;
 
-  const SelectCategory({
+  const SortCategories({
     required this.oldIndex,
     required this.newIndex,
-});
+  });
+
 
   @override
   List<Object?> get props => [oldIndex, newIndex];
